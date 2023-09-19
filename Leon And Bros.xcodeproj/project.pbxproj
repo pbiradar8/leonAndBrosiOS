@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3169A0952ABA3D7700406AFA /* Leon_And_BrosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169A0942ABA3D7700406AFA /* Leon_And_BrosApp.swift */; };
+		3169A0972ABA3D7700406AFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169A0962ABA3D7700406AFA /* ContentView.swift */; };
+		3169A0992ABA3D7A00406AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3169A0982ABA3D7A00406AFA /* Assets.xcassets */; };
+		3169A09D2ABA3D7A00406AFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3169A09C2ABA3D7A00406AFA /* Preview Assets.xcassets */; };
+		3169A0A72ABA3D7A00406AFA /* Leon_And_BrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169A0A62ABA3D7A00406AFA /* Leon_And_BrosTests.swift */; };
+		3169A0B12ABA3D7A00406AFA /* Leon_And_BrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169A0B02ABA3D7A00406AFA /* Leon_And_BrosUITests.swift */; };
+		3169A0B32ABA3D7A00406AFA /* Leon_And_BrosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169A0B22ABA3D7A00406AFA /* Leon_And_BrosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3169A0A32ABA3D7A00406AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3169A0892ABA3D7700406AFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3169A0902ABA3D7700406AFA;
+			remoteInfo = "Leon And Bros";
+		};
+		3169A0AD2ABA3D7A00406AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3169A0892ABA3D7700406AFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3169A0902ABA3D7700406AFA;
+			remoteInfo = "Leon And Bros";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3169A0912ABA3D7700406AFA /* Leon And Bros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Leon And Bros.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3169A0942ABA3D7700406AFA /* Leon_And_BrosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leon_And_BrosApp.swift; sourceTree = "<group>"; };
+		3169A0962ABA3D7700406AFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3169A0982ABA3D7A00406AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3169A09A2ABA3D7A00406AFA /* Leon_And_Bros.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Leon_And_Bros.entitlements; sourceTree = "<group>"; };
+		3169A09C2ABA3D7A00406AFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3169A0A22ABA3D7A00406AFA /* Leon And BrosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Leon And BrosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3169A0A62ABA3D7A00406AFA /* Leon_And_BrosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leon_And_BrosTests.swift; sourceTree = "<group>"; };
+		3169A0AC2ABA3D7A00406AFA /* Leon And BrosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Leon And BrosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3169A0B02ABA3D7A00406AFA /* Leon_And_BrosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leon_And_BrosUITests.swift; sourceTree = "<group>"; };
+		3169A0B22ABA3D7A00406AFA /* Leon_And_BrosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leon_And_BrosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3169A08E2ABA3D7700406AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3169A09F2ABA3D7A00406AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3169A0A92ABA3D7A00406AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3169A0882ABA3D7700406AFA = {
+			isa = PBXGroup;
+			children = (
+				3169A0932ABA3D7700406AFA /* Leon And Bros */,
+				3169A0A52ABA3D7A00406AFA /* Leon And BrosTests */,
+				3169A0AF2ABA3D7A00406AFA /* Leon And BrosUITests */,
+				3169A0922ABA3D7700406AFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3169A0922ABA3D7700406AFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3169A0912ABA3D7700406AFA /* Leon And Bros.app */,
+				3169A0A22ABA3D7A00406AFA /* Leon And BrosTests.xctest */,
+				3169A0AC2ABA3D7A00406AFA /* Leon And BrosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3169A0932ABA3D7700406AFA /* Leon And Bros */ = {
+			isa = PBXGroup;
+			children = (
+				3169A0942ABA3D7700406AFA /* Leon_And_BrosApp.swift */,
+				3169A0962ABA3D7700406AFA /* ContentView.swift */,
+				3169A0982ABA3D7A00406AFA /* Assets.xcassets */,
+				3169A09A2ABA3D7A00406AFA /* Leon_And_Bros.entitlements */,
+				3169A09B2ABA3D7A00406AFA /* Preview Content */,
+			);
+			path = "Leon And Bros";
+			sourceTree = "<group>";
+		};
+		3169A09B2ABA3D7A00406AFA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3169A09C2ABA3D7A00406AFA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3169A0A52ABA3D7A00406AFA /* Leon And BrosTests */ = {
+			isa = PBXGroup;
+			children = (
+				3169A0A62ABA3D7A00406AFA /* Leon_And_BrosTests.swift */,
+			);
+			path = "Leon And BrosTests";
+			sourceTree = "<group>";
+		};
+		3169A0AF2ABA3D7A00406AFA /* Leon And BrosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3169A0B02ABA3D7A00406AFA /* Leon_And_BrosUITests.swift */,
+				3169A0B22ABA3D7A00406AFA /* Leon_And_BrosUITestsLaunchTests.swift */,
+			);
+			path = "Leon And BrosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3169A0902ABA3D7700406AFA /* Leon And Bros */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3169A0B62ABA3D7A00406AFA /* Build configuration list for PBXNativeTarget "Leon And Bros" */;
+			buildPhases = (
+				3169A08D2ABA3D7700406AFA /* Sources */,
+				3169A08E2ABA3D7700406AFA /* Frameworks */,
+				3169A08F2ABA3D7700406AFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Leon And Bros";
+			productName = "Leon And Bros";
+			productReference = 3169A0912ABA3D7700406AFA /* Leon And Bros.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3169A0A12ABA3D7A00406AFA /* Leon And BrosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3169A0B92ABA3D7A00406AFA /* Build configuration list for PBXNativeTarget "Leon And BrosTests" */;
+			buildPhases = (
+				3169A09E2ABA3D7A00406AFA /* Sources */,
+				3169A09F2ABA3D7A00406AFA /* Frameworks */,
+				3169A0A02ABA3D7A00406AFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3169A0A42ABA3D7A00406AFA /* PBXTargetDependency */,
+			);
+			name = "Leon And BrosTests";
+			productName = "Leon And BrosTests";
+			productReference = 3169A0A22ABA3D7A00406AFA /* Leon And BrosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3169A0AB2ABA3D7A00406AFA /* Leon And BrosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3169A0BC2ABA3D7A00406AFA /* Build configuration list for PBXNativeTarget "Leon And BrosUITests" */;
+			buildPhases = (
+				3169A0A82ABA3D7A00406AFA /* Sources */,
+				3169A0A92ABA3D7A00406AFA /* Frameworks */,
+				3169A0AA2ABA3D7A00406AFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3169A0AE2ABA3D7A00406AFA /* PBXTargetDependency */,
+			);
+			name = "Leon And BrosUITests";
+			productName = "Leon And BrosUITests";
+			productReference = 3169A0AC2ABA3D7A00406AFA /* Leon And BrosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3169A0892ABA3D7700406AFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					3169A0902ABA3D7700406AFA = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					3169A0A12ABA3D7A00406AFA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 3169A0902ABA3D7700406AFA;
+					};
+					3169A0AB2ABA3D7A00406AFA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 3169A0902ABA3D7700406AFA;
+					};
+				};
+			};
+			buildConfigurationList = 3169A08C2ABA3D7700406AFA /* Build configuration list for PBXProject "Leon And Bros" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3169A0882ABA3D7700406AFA;
+			productRefGroup = 3169A0922ABA3D7700406AFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3169A0902ABA3D7700406AFA /* Leon And Bros */,
+				3169A0A12ABA3D7A00406AFA /* Leon And BrosTests */,
+				3169A0AB2ABA3D7A00406AFA /* Leon And BrosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3169A08F2ABA3D7700406AFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3169A09D2ABA3D7A00406AFA /* Preview Assets.xcassets in Resources */,
+				3169A0992ABA3D7A00406AFA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3169A0A02ABA3D7A00406AFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3169A0AA2ABA3D7A00406AFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3169A08D2ABA3D7700406AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3169A0972ABA3D7700406AFA /* ContentView.swift in Sources */,
+				3169A0952ABA3D7700406AFA /* Leon_And_BrosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3169A09E2ABA3D7A00406AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3169A0A72ABA3D7A00406AFA /* Leon_And_BrosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3169A0A82ABA3D7A00406AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3169A0B32ABA3D7A00406AFA /* Leon_And_BrosUITestsLaunchTests.swift in Sources */,
+				3169A0B12ABA3D7A00406AFA /* Leon_And_BrosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3169A0A42ABA3D7A00406AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3169A0902ABA3D7700406AFA /* Leon And Bros */;
+			targetProxy = 3169A0A32ABA3D7A00406AFA /* PBXContainerItemProxy */;
+		};
+		3169A0AE2ABA3D7A00406AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3169A0902ABA3D7700406AFA /* Leon And Bros */;
+			targetProxy = 3169A0AD2ABA3D7A00406AFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3169A0B42ABA3D7A00406AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3169A0B52ABA3D7A00406AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		3169A0B72ABA3D7A00406AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Leon And Bros/Leon_And_Bros.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Leon And Bros/Preview Content\"";
+				DEVELOPMENT_TEAM = 77465JAGLW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonAndBros.Leon-And-Bros";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3169A0B82ABA3D7A00406AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Leon And Bros/Leon_And_Bros.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Leon And Bros/Preview Content\"";
+				DEVELOPMENT_TEAM = 77465JAGLW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonAndBros.Leon-And-Bros";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3169A0BA2ABA3D7A00406AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77465JAGLW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonAndBros.Leon-And-BrosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leon And Bros.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Leon And Bros";
+			};
+			name = Debug;
+		};
+		3169A0BB2ABA3D7A00406AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77465JAGLW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonAndBros.Leon-And-BrosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leon And Bros.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Leon And Bros";
+			};
+			name = Release;
+		};
+		3169A0BD2ABA3D7A00406AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77465JAGLW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonAndBros.Leon-And-BrosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Leon And Bros";
+			};
+			name = Debug;
+		};
+		3169A0BE2ABA3D7A00406AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77465JAGLW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leonAndBros.Leon-And-BrosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Leon And Bros";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3169A08C2ABA3D7700406AFA /* Build configuration list for PBXProject "Leon And Bros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3169A0B42ABA3D7A00406AFA /* Debug */,
+				3169A0B52ABA3D7A00406AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3169A0B62ABA3D7A00406AFA /* Build configuration list for PBXNativeTarget "Leon And Bros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3169A0B72ABA3D7A00406AFA /* Debug */,
+				3169A0B82ABA3D7A00406AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3169A0B92ABA3D7A00406AFA /* Build configuration list for PBXNativeTarget "Leon And BrosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3169A0BA2ABA3D7A00406AFA /* Debug */,
+				3169A0BB2ABA3D7A00406AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3169A0BC2ABA3D7A00406AFA /* Build configuration list for PBXNativeTarget "Leon And BrosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3169A0BD2ABA3D7A00406AFA /* Debug */,
+				3169A0BE2ABA3D7A00406AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3169A0892ABA3D7700406AFA /* Project object */;
+}
