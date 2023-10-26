@@ -14,7 +14,6 @@ struct ContentView: View {
     @State var isSearchbarPresented = false
     
     var filteredParts: [Part] {
-        
         if searchTerm.isEmpty { return allParts }
         
         return allParts.filter { $0.agPartNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false || $0.oemNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false

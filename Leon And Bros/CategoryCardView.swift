@@ -8,30 +8,23 @@
 import SwiftUI
 
 struct CategoryCardView: View {
-
     let title: String
 
     var body: some View {
         VStack(spacing: 0) {
             Text(title)
                 .padding()
-                .bold()
-                .foregroundColor(Color.black)
                 .frame(maxWidth: .infinity)
+                .foregroundColor(Color.black)
                 .background(Theme.CustomColor.secondaryColor)
             
-            Button {
-                
-            } label: {
-                Text("View Products")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-//                    .frame(width: 200, height: 100)
-                    .background(Theme.CustomColor.primaryColor)
-                    .foregroundColor(.white)
-            }
-
+            Text("View Products")
+                .padding()
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.white)
+                .background(Theme.CustomColor.primaryColor)
         }
+        .clipShape(RoundedRectangle(cornerRadius: 5))
     }
 }
 

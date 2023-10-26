@@ -17,62 +17,21 @@ struct CategoryInfoView: View {
     ]
     
     var body: some View {
-        VStack {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    if !(parts?.isEmpty ?? true), let partCount = parts?.count {
-                        LazyVGrid(columns: adaptiveColumns, content: {
-                            ForEach(0..<partCount) { i in
-                                PartDescriptionView(part: parts?[i])
-                            }
-                        })
-                    }
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVGrid(columns: adaptiveColumns, content: {
+                ForEach(parts ?? [], id: \.self) { part in
+                    PartDescriptionView(part: part)
                 }
-                .padding()
-            }
-            .frame(alignment: .top)
-            .navigationTitle(categoryName)
-            .navigationBarTitleDisplayMode(.inline)
-
-            Spacer()
+            })
+            .padding()
         }
+        .frame(alignment: .top)
+        .navigationTitle(categoryName)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    CategoryInfoView(categoryName: "", parts: [Part(agPartNumber: "K8688-AG", photo: "https://i.ibb.co/YZVbZWt/ES800973.png", moogNumber: "", oemNumber: "", application: "", category: "")])
+    CategoryInfoView(categoryName: "", parts: [Part(agPartNumber: "K8688-AG", photo: "https://i.ibb.co/YZVbZWt/ES800973.png", moogNumber: "", oemNumber: "F5AZ3590A, F8AZ3590AA, F5AZ3590A, F8AZ3590AA, F5AZ3590A, F8AZ3590AA, F5AZ3590A, F8AZ3590AA", application: "", category: "")])
         .previewLayout(.sizeThatFits)
-}
-
-struct PartDescriptionView: View {
-    let part: Part?
-    
-    var body: some View {
-        VStack {
-            AsyncImage(url: URL(string: part?.photo ?? "")) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: 400, maxHeight: 400)
-            } placeholder: {
-                ProgressView()
-                    .controlSize(.extraLarge)
-                    .frame(maxWidth: 400, maxHeight: 400)
-            }
-            
-            Text(part?.agPartNumber ?? "")
-                .foregroundStyle(.white)
-            
-            HStack {
-                HStack {
-                    (Text("4.5 ") + Text(Image(systemName: "star")))
-                }
-                .foregroundStyle(.white)
-                
-                Text("(36,177)")
-                    .foregroundStyle(.white)
-            }
-        }
-        .padding()
-        .background(.gray)
-    }
 }
