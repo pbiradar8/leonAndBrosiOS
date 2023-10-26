@@ -8,21 +8,31 @@
 import SwiftUI
 
 struct CategoryInfoView: View {
+    let categoryName: String
     @State var parts: [Part]? = []
+    
+    private let adaptiveColumns = [
+        GridItem(.fixed(160), spacing: 20, alignment: .top),
+        GridItem(.fixed(160), spacing: 20, alignment: .top),
+    ]
     
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading) {
                     if !(parts?.isEmpty ?? true), let partCount = parts?.count {
-                        ForEach(0..<partCount) { i in
-                            PartDescriptionView(part: parts?[i])
-                        }
+                        LazyVGrid(columns: adaptiveColumns, content: {
+                            ForEach(0..<partCount) { i in
+                                PartDescriptionView(part: parts?[i])
+                            }
+                        })
                     }
                 }
                 .padding()
             }
             .frame(alignment: .top)
+            .navigationTitle(categoryName)
+            .navigationBarTitleDisplayMode(.inline)
 
             Spacer()
         }
@@ -30,7 +40,7 @@ struct CategoryInfoView: View {
 }
 
 #Preview {
-    CategoryInfoView(parts: [Part(agPartNumber: "K8688-AG", photo: "https://i.ibb.co/YZVbZWt/ES800973.png", moogNumber: "", oemNumber: "", application: "", category: "")])
+    CategoryInfoView(categoryName: "", parts: [Part(agPartNumber: "K8688-AG", photo: "https://i.ibb.co/YZVbZWt/ES800973.png", moogNumber: "", oemNumber: "", application: "", category: "")])
         .previewLayout(.sizeThatFits)
 }
 

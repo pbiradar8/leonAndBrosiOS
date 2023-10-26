@@ -22,8 +22,8 @@ struct ContentView: View {
     }
     
     private let adaptiveColumns = [
-        GridItem(.fixed(160), spacing: 32, alignment: .top),
-        GridItem(.fixed(160), alignment: .top)
+        GridItem(.fixed(160), spacing: 20, alignment: .top),
+        GridItem(.fixed(160), spacing: 20, alignment: .top),
     ]
     
     var body: some View {
@@ -45,7 +45,7 @@ struct ContentView: View {
                     LazyVGrid(columns: adaptiveColumns, alignment: .center, spacing: 20) {
                         ForEach(Array(categorisedParts.keys), id: \.self) { category in
                             NavigationLink {
-                                CategoryInfoView(parts: categorisedParts[category])
+                                CategoryInfoView(categoryName: category ?? "", parts: categorisedParts[category])
                             } label: {
                                 CategoryCardView(title: category ?? "")
                             }
@@ -54,13 +54,13 @@ struct ContentView: View {
                     .padding()
                 }
             }
+            .scrollIndicators(.hidden)
             .navigationTitle("Our Products")
             .searchable(text: $searchTerm, isPresented: $isSearchbarPresented, prompt: "Search for Part / OEM Number")
         }
         .onAppear(perform: {
             loadJson(filename: "AutoParts")
         })
-        .padding()
     }
     
     func loadJson(filename fileName: String) {
