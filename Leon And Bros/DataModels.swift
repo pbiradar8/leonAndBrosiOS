@@ -5,7 +5,7 @@
 //  Created by Pravin Biradar on 2023-09-26.
 //
 
-struct Part: Codable, Hashable {
+struct Part: Codable, Hashable {    
     let agPartNumber: String?
     let photo: String?
     let moogNumber: String?

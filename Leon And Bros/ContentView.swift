@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var allParts: [Part] = []
     @State var categorisedParts: [String? : [Part]] = [:]
     @State var searchTerm = ""
+    @State var isSearchbarPresented = false
     
-    var filteredCategories: [String? : [Part]] {
+    var filteredParts: [Part] {
         
-        if searchTerm.isEmpty { return categorisedParts }
+        if searchTerm.isEmpty { return allParts }
         
-        return categorisedParts.filter { $0.key?.localizedCaseInsensitiveContains(searchTerm) ?? false }
+        return allParts.filter { $0.agPartNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false || $0.oemNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false
+        }
     }
     
     private let adaptiveColumns = [
@@ -26,24 +29,38 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVGrid(columns: adaptiveColumns, alignment: .center, spacing: 20) {
-                    ForEach(Array(filteredCategories.keys), id: \.self) { category in
-                        NavigationLink {
-                            CategoryInfoView(parts: filteredCategories[category])
-                        } label: {
-                            CategoryCardView(title: category ?? "")
+                if isSearchbarPresented {
+                    if filteredParts.isEmpty {
+                        Text("No parts found with the search term")
+                            .padding()
+                    } else {
+                        LazyVGrid(columns: adaptiveColumns) {
+                            ForEach(filteredParts, id: \.self) { part in
+                                PartDescriptionView(part: part)
+                            }
+                        }
+                        .padding()
+                    }
+                } else {
+                    LazyVGrid(columns: adaptiveColumns, alignment: .center, spacing: 20) {
+                        ForEach(Array(categorisedParts.keys), id: \.self) { category in
+                            NavigationLink {
+                                CategoryInfoView(parts: categorisedParts[category])
+                            } label: {
+                                CategoryCardView(title: category ?? "")
+                            }
                         }
                     }
+                    .padding()
                 }
-                .padding()
             }
             .navigationTitle("Our Products")
+            .searchable(text: $searchTerm, isPresented: $isSearchbarPresented, prompt: "Search for Part / OEM Number")
         }
         .onAppear(perform: {
             loadJson(filename: "AutoParts")
         })
         .padding()
-        .searchable(text: $searchTerm, prompt: "Search for the Part / OEM Number")
     }
     
     func loadJson(filename fileName: String) {
@@ -56,6 +73,7 @@ struct ContentView: View {
                 let categorisedParts = Dictionary(grouping: parsedParts, by: { $0.category })
                 
                 DispatchQueue.main.async {
+                    self.allParts = parsedParts
                     self.categorisedParts = categorisedParts
                 }
             } catch {
