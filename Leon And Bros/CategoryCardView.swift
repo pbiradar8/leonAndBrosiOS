@@ -12,13 +12,25 @@ struct CategoryCardView: View {
     let title: String
 
     var body: some View {
-        VStack(spacing: -Theme.Size.cornerRadius) {
+        VStack(spacing: 0) {
             Text(title)
                 .padding()
                 .bold()
                 .foregroundColor(Color.black)
                 .frame(maxWidth: .infinity)
                 .background(Theme.CustomColor.secondaryColor)
+            
+            Button {
+                
+            } label: {
+                Text("View Products")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+//                    .frame(width: 200, height: 100)
+                    .background(Theme.CustomColor.primaryColor)
+                    .foregroundColor(.white)
+            }
+
         }
     }
 }

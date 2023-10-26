@@ -9,6 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @State var categorisedParts: [String? : [Part]] = [:]
+    @State var searchTerm = ""
+    
+    var filteredCategories: [String? : [Part]] {
+        
+        if searchTerm.isEmpty { return categorisedParts }
+        
+        return categorisedParts.filter { $0.key?.localizedCaseInsensitiveContains(searchTerm) ?? false }
+    }
     
     private let adaptiveColumns = [
         GridItem(.fixed(160), spacing: 32, alignment: .top),
@@ -16,12 +24,12 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 LazyVGrid(columns: adaptiveColumns, alignment: .center, spacing: 20) {
-                    ForEach(Array(categorisedParts.keys), id: \.self) { category in
+                    ForEach(Array(filteredCategories.keys), id: \.self) { category in
                         NavigationLink {
-                            CategoryInfoView(parts: categorisedParts[category])
+                            CategoryInfoView(parts: filteredCategories[category])
                         } label: {
                             CategoryCardView(title: category ?? "")
                         }
@@ -29,12 +37,13 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Categories")
+            .navigationTitle("Our Products")
         }
         .onAppear(perform: {
             loadJson(filename: "AutoParts")
         })
         .padding()
+        .searchable(text: $searchTerm, prompt: "Search for the Part / OEM Number")
     }
     
     func loadJson(filename fileName: String) {
