@@ -21,8 +21,7 @@ struct ContentView: View {
     }
     
     private let adaptiveColumns = [
-        GridItem(.fixed(160), spacing: 20, alignment: .top),
-        GridItem(.fixed(160), spacing: 20, alignment: .top),
+        GridItem(.adaptive(minimum: 160, maximum: 300), spacing: 20, alignment: .top)
     ]
     
     var body: some View {
