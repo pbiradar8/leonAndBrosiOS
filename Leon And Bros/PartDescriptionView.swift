@@ -12,34 +12,6 @@ struct PartDescriptionView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
-            AsyncImage(url: URL(string: part?.photo ?? "")) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: 300, maxHeight: 300)
-            } placeholder: {
-                ProgressView()
-                    .controlSize(.extraLarge)
-                    .frame(maxWidth: 300, maxHeight: 300)
-            }
-            .padding(5)
-            
-            VStack(alignment: .center) {
-                Text(part?.agPartNumber ?? "")
-                    .bold()
-                    .padding(.top)
-                    .padding(.bottom)
-
-                
-//                Text("OEM Numbers:")
-//                    .padding(.horizontal)
-//                
-//                Text(part?.oemNumber ?? "")
-//                    .padding(.bottom)
-//                    .lineLimit(1)
-            }
-            .frame(maxWidth: .infinity)
-            .background(Theme.CustomColor.secondaryColor)
-            
             NavigationLink {
                 if let part = part {
                     PartDetailedDescriptionView(part: part)
@@ -47,11 +19,35 @@ struct PartDescriptionView: View {
                     EmptyView()
                 }
             } label: {
-                Text("Know More")
-                    .padding()
+                VStack(alignment: .center, spacing: 0) {
+                    AsyncImage(url: URL(string: part?.photo ?? "")) { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 300, maxHeight: 300)
+                    } placeholder: {
+                        ProgressView()
+                            .controlSize(.extraLarge)
+                            .frame(maxWidth: 300, maxHeight: 300)
+                            .tint(Theme.CustomColor.primaryColor)
+                    }
+                    .padding(5)
+                    
+                    VStack(alignment: .center) {
+                        Text(part?.agPartNumber ?? "")
+                            .bold()
+                            .padding(.top)
+                            .padding(.bottom)
+                            .foregroundColor(.black)
+                    }
                     .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .background(Theme.CustomColor.primaryColor)
+                    .background(Theme.CustomColor.secondaryColor)
+                    
+                    Text("Know More")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .background(Theme.CustomColor.primaryColor)
+                }
             }
         }
         .background(.white)
