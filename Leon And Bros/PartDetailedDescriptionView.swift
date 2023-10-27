@@ -22,25 +22,31 @@ struct PartDetailedDescriptionView: View {
                         .controlSize(.extraLarge)
                         .frame(maxWidth: 300, maxHeight: 300)
                 }
-                
+                .clipShape(RoundedRectangle(cornerRadius: 5))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Theme.CustomColor.secondaryColor)
+                )
+
                 VStack {
                     Text("OEM Numbers:")
                         .bold()
                         .padding(.top)
-                        .frame(maxWidth: .infinity)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
                     Text(part.oemNumber ?? "")
-                        .frame(maxWidth: .infinity)
-                    
+                        .frame(maxWidth: .infinity, alignment: .leading)
+
                     Text("Application Numbers:")
                         .bold()
                         .padding(.top)
-                        .frame(maxWidth: .infinity)
-                    
+                        .frame(maxWidth: .infinity, alignment: .leading)
+
                     Text(part.application ?? "")
-                        .frame(maxWidth: .infinity)
+                        .frame(maxWidth: .infinity, alignment: .leading)
 
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
             }
         }
