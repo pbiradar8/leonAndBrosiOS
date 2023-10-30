@@ -17,6 +17,7 @@ struct CategoryCardView: View {
                 .frame(maxWidth: .infinity)
                 .foregroundColor(Color.black)
                 .background(Theme.CustomColor.secondaryColor)
+                .lineLimit(2, reservesSpace: true)
             
             Text("View Products")
                 .padding()

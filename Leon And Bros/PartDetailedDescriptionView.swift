@@ -44,6 +44,7 @@ struct PartDetailedDescriptionView: View {
 
                     Text(part.application ?? "")
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.caption)
 
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
