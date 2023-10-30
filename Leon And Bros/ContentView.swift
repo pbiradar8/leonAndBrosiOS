@@ -11,12 +11,14 @@ struct ContentView: View {
     @State var allParts: [Part] = []
     @State var categorisedParts: [String? : [Part]] = [:]
     @State var searchTerm = ""
-    @State var isSearchbarPresented = false
+    @State var isSearchPresented = false
     
     var filteredParts: [Part] {
         if searchTerm.isEmpty { return allParts }
         
-        return allParts.filter { $0.agPartNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false || $0.oemNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false
+        return allParts.filter {
+            $0.agPartNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false ||
+            $0.oemNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false
         }
     }
     
@@ -27,7 +29,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                if isSearchbarPresented {
+                if isSearchPresented {
                     if filteredParts.isEmpty {
                         Text("No parts found with the search term")
                             .padding()
@@ -43,7 +45,7 @@ struct ContentView: View {
                     LazyVGrid(columns: adaptiveColumns, alignment: .center, spacing: 20) {
                         ForEach(Array(categorisedParts.keys), id: \.self) { category in
                             NavigationLink {
-                                CategoryInfoView(categoryName: category ?? "", parts: categorisedParts[category])
+                                CategoryInfoView(categoryName: category ?? "", allParts: allParts)
                             } label: {
                                 CategoryCardView(title: category ?? "")
                             }
@@ -54,7 +56,7 @@ struct ContentView: View {
             }
             .scrollIndicators(.hidden)
             .navigationTitle("Our Products")
-            .searchable(text: $searchTerm, isPresented: $isSearchbarPresented, prompt: "Search for Part / OEM Number")
+            .searchable(text: $searchTerm, isPresented: $isSearchPresented, prompt: "Search for Part / OEM Number")
         }
         .onAppear(perform: {
             loadJson(filename: "AutoParts")

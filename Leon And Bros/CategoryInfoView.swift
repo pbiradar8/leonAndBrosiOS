@@ -9,28 +9,60 @@ import SwiftUI
 
 struct CategoryInfoView: View {
     let categoryName: String
-    @State var parts: [Part]? = []
+    
+    @State var allParts: [Part] = []
+    @State var searchTerm = ""
+    @State var isSearchPresented = false
+    
+    private var currentCategoryParts: [Part] {
+        return allParts.filter({ $0.category == categoryName})
+    }
+    
+    var filteredParts: [Part] {
+        if searchTerm.isEmpty { return allParts }
+        
+        return allParts.filter {
+            $0.agPartNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false ||
+            $0.oemNumber?.localizedCaseInsensitiveContains(searchTerm) ?? false
+        }
+    }
     
     private let adaptiveColumns = [
-        GridItem(.adaptive(minimum: 160, maximum: 300), spacing: 20, alignment: .top),
+        GridItem(.adaptive(minimum: 160, maximum: 300), spacing: 20, alignment: .top)
     ]
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            LazyVGrid(columns: adaptiveColumns, content: {
-                ForEach(parts ?? [], id: \.self) { part in
-                    PartDescriptionView(part: part)
+            if isSearchPresented {
+                if filteredParts.isEmpty {
+                    Text("No parts found with the search term")
+                        .padding()
+                } else {
+                    LazyVGrid(columns: adaptiveColumns) {
+                        ForEach(filteredParts, id: \.self) { part in
+                            PartDescriptionView(part: part)
+                        }
+                    }
+                    .padding()
                 }
-            })
-            .padding()
+            } else {
+                LazyVGrid(columns: adaptiveColumns, content: {
+                    ForEach(currentCategoryParts, id: \.self) { part in
+                        PartDescriptionView(part: part)
+                    }
+                })
+                .padding()
+            }
+            
         }
         .frame(alignment: .top)
         .navigationTitle(categoryName)
         .navigationBarTitleDisplayMode(.inline)
+        .searchable(text: $searchTerm, isPresented: $isSearchPresented, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search for Part / OEM Number")
     }
 }
 
 #Preview {
-    CategoryInfoView(categoryName: "", parts: [Part(agPartNumber: "K8688-AG", photo: "https://i.ibb.co/YZVbZWt/ES800973.png", moogNumber: "", oemNumber: "F5AZ3590A, F8AZ3590AA, F5AZ3590A, F8AZ3590AA, F5AZ3590A, F8AZ3590AA, F5AZ3590A, F8AZ3590AA", application: "", category: "")])
+    CategoryInfoView(categoryName: "Control Arm Bushing")
         .previewLayout(.sizeThatFits)
 }
