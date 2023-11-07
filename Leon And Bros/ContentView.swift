@@ -56,7 +56,7 @@ struct ContentView: View {
             }
             .scrollIndicators(.hidden)
             .navigationTitle("Our Products")
-            .searchable(text: $searchTerm, isPresented: $isSearchPresented, prompt: "Search for Part / OEM Number")
+            .searchable(text: $searchTerm, isPresented: $isSearchPresented, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search for Part / OEM Number")
         }
         .onAppear(perform: {
             loadJson(filename: "AutoParts")
