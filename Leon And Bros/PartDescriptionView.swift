@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PartDescriptionView: View {
     let part: Part?
@@ -20,17 +21,19 @@ struct PartDescriptionView: View {
                 }
             } label: {
                 VStack(alignment: .center, spacing: 0) {
-                    AsyncImage(url: URL(string: part?.photo ?? "")) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: 300, maxHeight: 300)
-                    } placeholder: {
-                        ProgressView()
-                            .controlSize(.extraLarge)
-                            .frame(maxWidth: 300, maxHeight: 300)
-                            .tint(Theme.CustomColor.primaryColor)
-                    }
-                    .padding(5)
+                    KFImage(URL(string: part?.photo ?? ""))
+                        .placeholder({ _ in
+                            ProgressView()
+                                .controlSize(.extraLarge)
+                                .frame(maxWidth: 300, maxHeight: 300)
+                                .tint(Theme.CustomColor.primaryColor)
+                        })
+                        .cacheOriginalImage()
+                        .fade(duration: 0.25)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: 300, maxHeight: 300)
+                        .padding(5)
                     
                     VStack(alignment: .center) {
                         Text(part?.agPartNumber ?? "")

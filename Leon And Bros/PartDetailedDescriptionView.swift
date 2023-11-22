@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PartDetailedDescriptionView: View {
     let part: Part
@@ -13,20 +14,23 @@ struct PartDetailedDescriptionView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center) {
-                AsyncImage(url: URL(string: part.photo ?? "")) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: 300, maxHeight: 300)
-                } placeholder: {
-                    ProgressView()
-                        .controlSize(.extraLarge)
-                        .frame(maxWidth: 300, maxHeight: 300)
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 5))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Theme.CustomColor.secondaryColor)
-                )
+                KFImage(URL(string: part.photo ?? ""))
+                    .placeholder({ _ in
+                        ProgressView()
+                            .controlSize(.extraLarge)
+                            .frame(maxWidth: 300, maxHeight: 300)
+                            .tint(Theme.CustomColor.primaryColor)
+                    })
+                    .cacheOriginalImage()
+                    .fade(duration: 0.25)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 300, maxHeight: 300)
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Theme.CustomColor.secondaryColor)
+                    )
 
                 VStack {
                     Text("OEM Numbers:")
